@@ -25,6 +25,8 @@ biblioteca utilizada: jest
 funcionalidade: CreateTradeService
 comando: yarn test 
 
+# Observação
+Não foi utilizado um banco de dados para armazenamento de dados, os dados estão sendo recebidos por um array.
 
 # instalar dependências
 npm i
