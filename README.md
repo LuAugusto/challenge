@@ -22,7 +22,7 @@ git clone https://github.com/LuAugusto/challenge
 
 # Documentação da API /  Rotas
  - Swagger-Ui-Express
- - Rota: http://localhost:5000/api-docs/#/
+ - Rota: http://localhost:5000/api-docs/
 
 # Testes unitários
 - biblioteca utilizada: jest
