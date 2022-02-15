@@ -14,11 +14,11 @@ Foi desenvolvida uma API para a resolução do problema proposto pela empresa sm
 # Como executar o projeto
 git clone https://github.com/LuAugusto/challenge
 
-Para executar o projeto é necessario possuir o docker inicializado na maquina.
+- Para executar o projeto é necessario possuir o docker inicializado na maquina.
 
-Gerar build e subir o projeto pelo Docker:
-docker-compose build
-docker-compose up
+- Gerar build e subir o projeto pelo Docker:
+- docker-compose build
+- docker-compose up
 
 # Testes unitários
 biblioteca utilizada: jest
