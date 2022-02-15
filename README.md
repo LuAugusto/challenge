@@ -20,10 +20,14 @@ git clone https://github.com/LuAugusto/challenge
 - docker-compose build
 - docker-compose up
 
+# Documentação da API /  Rotas
+ - Swagger-Ui-Express
+ - Rota: http://localhost:5000/api-docs/#/
+
 # Testes unitários
-biblioteca utilizada: jest
-funcionalidade: CreateTradeService
-comando: yarn test 
+- biblioteca utilizada: jest
+- funcionalidade: CreateTradeService
+- comando: yarn test 
 
 # Observação
 Não foi utilizado um banco de dados para armazenamento de dados, os dados estão sendo recebidos por um array.
