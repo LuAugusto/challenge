@@ -19,6 +19,7 @@ git clone https://github.com/LuAugusto/challenge
 - Gerar build e subir o projeto pelo Docker:
 - docker-compose build
 - docker-compose up
+- Port: 5000
 
 # Documentação da API /  Rotas
  - Swagger-Ui-Express
