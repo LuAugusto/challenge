@@ -1,0 +1,435 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "API-Challenge",
+    "description": "Service API from challenge",
+    "version": "1.0.0"
+  },
+  "servers":[
+    {
+      "url": "http://localhost:5000/api-docs/",
+      "description": "API Challenge"
+    }
+  ],
+  "basePath":"/trades",
+  "paths": {
+    "/trades/{stockCode}/{qtd}" : {
+      "post": {
+        "description":"Create trades",
+        "summary": "Create trades",
+        "tags":["Trades"],
+        "parameters": [
+          {
+            "in": "params",
+            "name": "stockCode", 
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "params",
+            "name": "qtd", 
+            "type": "string",
+            "required": true
+          }
+        ],
+        "responses": {
+          "201":{
+            "description": "Success created!"
+          },
+          "400":{
+            "description": "Create Error"
+          }
+        }
+      }
+    },
+    "/trades/allTrades" : {
+      "get": {
+        "description":"get trades",
+        "summary": "get trades",
+        "tags":["Trades"],
+        "parameters": [],
+        "responses": {
+          "201":{
+            "description": "Success!",
+            "content":{
+              "application/json": {
+                "schemas":{
+                  "type": "object",
+                  "Trades":{
+                    "properties": 
+                      [
+                        {
+                          "content":{
+                            "application/json": {
+                              "schemas":{
+                                "type": "object",
+                                "Trades":{
+                                  "properties": {
+                                    "stockCode": {
+                                      "type": "string"
+                                    },
+                                    "price": {
+                                      "type": "number"
+                                    },
+                                    "qtd": {
+                                      "type": "string"
+                                    },
+                                    "id": {
+                                      "type": "string"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      ]
+                  }
+                }
+              }
+            }
+
+          },
+          "400":{
+            "description": "Create Error"
+          }
+        }
+      }
+    },
+    "/trades/{stockCode}" : {
+      "get": {
+        "description":"get specific trades",
+        "summary": "get specific trades",
+        "tags":["Trades"],
+        "parameters": [
+          {
+            "in": "params",
+            "name": "stockCode", 
+            "type": "string",
+            "required": true
+          }
+        ],
+        "responses": {
+          "201":{
+            "description": "Success!",
+            "content":{
+              "application/json": {
+                "schemas":{
+                  "type": "object",
+                  "Trades":{
+                    "properties": {
+                      "stockCode": {
+                        "type": "string"
+                      },
+                      "price": {
+                        "type": "number"
+                      },
+                      "qtd": {
+                        "type": "string"
+                      },
+                      "id": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+
+          },
+          "400":{
+            "description": "Create Error"
+          }
+        }
+      }
+    },
+    "/trades/allTrades/recentTrades" : {
+      "get": {
+        "description":"get most recent all trades",
+        "summary": "get most recent all trades",
+        "tags":["Trades"],
+        "parameters": [],
+        "responses": {
+          "201":{
+            "description": "Success!",
+            "content":{
+              "application/json": {
+                "schemas":{
+                  "type": "object",
+                  "Trades":{
+                    "properties": {
+                      "stockCode": {
+                        "type": "string"
+                      },
+                      "price": {
+                        "type": "number"
+                      },
+                      "qtd": {
+                        "type": "string"
+                      },
+                      "id": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+
+          },
+          "400":{
+            "description": "Create Error"
+          }
+        }
+      }
+    },
+    "/trades/specificTrade/{stockCode}" : {
+      "get": {
+        "description":"get specific trade",
+        "summary": "get specific trade",
+        "tags":["Trades"],
+        "parameters": [
+          {
+            "in": "params",
+            "name": "stockCode", 
+            "type": "string",
+            "required": true
+          }
+        ],
+        "responses": {
+          "201":{
+            "description": "Success!",
+            "content":{
+              "application/json": {
+                "schemas":{
+                  "type": "object",
+                  "Trades":{
+                    "properties": {
+                      "stockCode": {
+                        "type": "string"
+                      },
+                      "price": {
+                        "type": "number"
+                      },
+                      "qtd": {
+                        "type": "string"
+                      },
+                      "id": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+
+          },
+          "400":{
+            "description": "Create Error"
+          }
+        }
+      }
+    },
+    "/trades/biggerPrice/{price}" : {
+      "get": {
+        "description":"get bigger price",
+        "summary": "get bigger price",
+        "tags":["Trades"],
+        "parameters": [
+          {
+            "in": "params",
+            "name": "price", 
+            "type": "string",
+            "required": true
+          }
+        ],
+        "responses": {
+          "201":{
+            "description": "Success!",
+            "content":{
+              "application/json": {
+                "schemas":{
+                  "type": "object",
+                  "Trades":{
+                    "properties": {
+                      "stockCode": {
+                        "type": "string"
+                      },
+                      "price": {
+                        "type": "number"
+                      },
+                      "qtd": {
+                        "type": "string"
+                      },
+                      "id": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+
+          },
+          "400":{
+            "description": "Create Error"
+          }
+        }
+      }
+    },
+    "/trades/biggerPriceTrade/{price}/{stockCode}" : {
+      "get": {
+        "description":"get bigger price specific trade",
+        "summary": "get bigger price specific trade",
+        "tags":["Trades"],
+        "parameters": [
+          {
+            "in": "params",
+            "name": "stockCode", 
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "params",
+            "name": "price", 
+            "type": "string",
+            "required": true
+          }
+        ],
+        "responses": {
+          "201":{
+            "description": "Success!",
+            "content":{
+              "application/json": {
+                "schemas":{
+                  "type": "object",
+                  "Trades":{
+                    "properties": {
+                      "stockCode": {
+                        "type": "string"
+                      },
+                      "price": {
+                        "type": "number"
+                      },
+                      "qtd": {
+                        "type": "string"
+                      },
+                      "id": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400":{
+            "description": "Create Error"
+          }
+        }
+      }
+    },
+    "/trades/smallerPrice/{price}" : {
+      "get": {
+        "description":"get smaller price",
+        "summary": "get smaller price",
+        "tags":["Trades"],
+         "parameters": [
+          {
+            "in": "params",
+            "name": "price", 
+            "type": "string",
+            "required": true
+          }
+        ],
+        "responses": {
+          "201":{
+            "description": "Success!",
+            "content":{
+              "application/json": {
+                "schemas":{
+                  "type": "object",
+                  "Trades":{
+                    "properties": {
+                      "stockCode": {
+                        "type": "string"
+                      },
+                      "price": {
+                        "type": "number"
+                      },
+                      "qtd": {
+                        "type": "string"
+                      },
+                      "id": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400":{
+            "description": "Create Error"
+          }
+        }
+      }
+    },
+    "/trades/smallerPriceTrade/{price}/{stockCode}" : {
+      "get": {
+        "description":"get smaller price specific trade",
+        "summary": "get smaller price specific trade",
+        "tags":["Trades"],
+        "parameters": [
+          {
+            "in": "params",
+            "name": "stockCode", 
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "params",
+            "name": "price", 
+            "type": "string",
+            "required": true
+          }
+        ],
+        "responses": {
+          "201":{
+            "description": "Success!",
+            "content":{
+              "application/json": {
+                "schemas":{
+                  "type": "object",
+                  "Trades":{
+                    "properties": {
+                      "stockCode": {
+                        "type": "string"
+                      },
+                      "price": {
+                        "type": "number"
+                      },
+                      "qtd": {
+                        "type": "string"
+                      },
+                      "id": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400":{
+            "description": "Create Error"
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+

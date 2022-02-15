@@ -6,7 +6,8 @@
     ],
     "outDir": "dist",
     "strictPropertyInitialization": false,
-    "strictNullChecks": false
+    "strictNullChecks": false,
+    "resolveJsonModule": true
   },
   "include": [
     "src"
